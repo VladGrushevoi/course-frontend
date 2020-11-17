@@ -11,7 +11,7 @@ import Places from './Components/Places';
 
 function App() {
   const [auth, setAuth] = useState()
-  const baseUrl = "http://927a47fd5575.ngrok.io/";
+  const baseUrl = "http://8978f3592367.ngrok.io/";
   const [parkings, setParkings] = useState([]);
   const [places, setPlaces] = useState([]);
   const [user, setUser] = useState([]);
