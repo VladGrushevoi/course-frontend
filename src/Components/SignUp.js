@@ -1,13 +1,15 @@
 import React from 'react'
 import { Container, Form, Col, Button } from 'react-bootstrap';
 import {useForm} from 'react-hook-form'
+import {useHistory} from 'react-router-dom'
 
 export default function SignUp(props) {
 
     const {register, handleSubmit} = useForm();
-
+    const history = useHistory();
     const onSubmit = (data) =>{
         props.onRegistration(data);
+        history.push("/");
     }
 
     return (

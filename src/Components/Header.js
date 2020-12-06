@@ -6,13 +6,18 @@ function Header(props) {
 
   const history = useHistory();
 
+  const onExit = () =>{
+    props.onExit();
+    history.push("/");
+  }
+
   const selectHeader = () =>{
     if(props.auth){
       // history.push("/");
       return (
       <Form inline>
         <Link to="/user-info" style={{fontSize:'28px', marginRight: '1em'}}>{props.client.firstName+" "+props.client.lastName}</Link>
-     <Button  variant="outline-info" onClick={() => props.onExit()} style={{fontSize:'28px', marginRight: '1em'}}>
+     <Button  variant="outline-info" onClick={() => onExit()} style={{fontSize:'28px', marginRight: '1em'}}>
        Вихід
      </Button>
      </Form>

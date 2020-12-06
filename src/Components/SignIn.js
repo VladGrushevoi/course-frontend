@@ -1,14 +1,16 @@
 import React from 'react'
 import {useForm} from 'react-hook-form'
+import {useHistory} from 'react-router-dom'
 import {Form, Button, Container} from 'react-bootstrap'
 
 
 function SignIn(props) {
 
     const {register, handleSubmit} = useForm();
+    const history = useHistory();
     const onSubmit = (data) =>{
         props.signIn(data);
-        console.log(33);
+        history.push("/");
     }
 
 
