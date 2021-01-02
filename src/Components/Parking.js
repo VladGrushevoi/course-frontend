@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Card } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom';
 
 function Parking(props) {
 
     const history = useHistory();
+    useEffect(()=>{
+        console.log(props)
+    });
     const setPark = (park) =>{
         history.push("/reservation")
         props.setPark(park.parkingId);
